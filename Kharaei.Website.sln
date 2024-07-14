@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7E0E8ACF-2013-4B5B-A8CF-801232607C58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kharaei.CMS", "src\Kharaei.CMS\Kharaei.CMS.csproj", "{FB6BECAC-F83A-4DE0-ACD0-592F1668A99C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FB6BECAC-F83A-4DE0-ACD0-592F1668A99C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB6BECAC-F83A-4DE0-ACD0-592F1668A99C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB6BECAC-F83A-4DE0-ACD0-592F1668A99C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB6BECAC-F83A-4DE0-ACD0-592F1668A99C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FB6BECAC-F83A-4DE0-ACD0-592F1668A99C} = {7E0E8ACF-2013-4B5B-A8CF-801232607C58}
+	EndGlobalSection
+EndGlobal
