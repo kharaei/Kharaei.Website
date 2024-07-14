@@ -22,8 +22,7 @@ mono_crash.*
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
-is-cache/
-[Mm]edia/
+[Dd]efault/
 [Rr]elease/
 [Rr]eleases/
 x64/
