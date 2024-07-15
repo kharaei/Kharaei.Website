@@ -1,6 +1,6 @@
 namespace Kharaei.CMS.Models;
 
-public class LayoutDto
+public class InstaLayout
 {
     public string? SiteTitle { get; set; }
     public int? PostCount { get; set; }

@@ -2,11 +2,11 @@ namespace Kharaei.CMS.Models;
 
 public class SiteSettings
 { 
-    public LayoutInformationSettings? LayoutInformationSettings { get; set; }
+    public InstaLayoutInfoModel? InstaLayoutInfo { get; set; }
 }
 
 
-public class LayoutInformationSettings : LayoutDto
+public class InstaLayoutInfoModel : InstaLayout
 {
     
 }
