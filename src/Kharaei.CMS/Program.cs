@@ -1,9 +1,11 @@
+using Kharaei.CMS.Models;
 using OrchardCore.Logging;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Host.UseNLogHost();
-
+builder.Services.Configure<SiteSettings>(builder.Configuration.GetSection(nameof(SiteSettings)));
+        
 builder.Services
     .AddOrchardCms()
     // // Orchard Specific Pipeline
