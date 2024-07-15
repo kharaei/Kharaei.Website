@@ -48,10 +48,10 @@ public class InstagramController(IOptions<SiteSettings> _siteSetting, IQueryMana
             //.Take(query.PageSize)
             .Select(s => new PostItem
             {
-                Date = s.CreateDate.Value.ToShortDateString(),
-                URL = s.Slug,
-                Title = s.Title, 
-                Image = s.Media is not null ? $"https://www.kharaei.ir/media/{s.Media}" : null,                
+                DateTime = s?.CreateDate,
+                URL = s?.Slug,
+                Title = s?.Title, 
+                Image = s?.Media is not null ? $"https://www.kharaei.ir/media/{s.Media}" : null,                
             }).ToList()
         };
 
@@ -59,8 +59,28 @@ public class InstagramController(IOptions<SiteSettings> _siteSetting, IQueryMana
     }
 
     [HttpGet("posts/{slug}")]
-    public IActionResult Posts(sbyte slug)
+    [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(InstaPost))]
+    public async Task<IActionResult> Get(string slug)
     {
-        return NoContent();
+        var contentQuery = await _queryManager.GetQueryAsync(Keys.QueryNames.InstaPost);
+        if (contentQuery is null)
+            throw new Exception("query not found");
+
+        var filters = new Dictionary<string, object>
+        {
+            { "slug", slug }
+        };
+        var postDetails = await _queryManager.ExecuteQueryAsync(contentQuery, filters)
+                                      ?? throw new Exception("query not found");
+
+        var records = postDetails.Items.Select(x => JsonSerializer.Deserialize<OrchardInstagramPost>(x.ToString() ?? string.Empty));
+        var result = new InstaPost
+        {
+            Title = records.FirstOrDefault()?.Title,
+            Image = records.FirstOrDefault()?.Media is not null ? $"https://www.kharaei.ir/media/{records.FirstOrDefault()?.Media}" : null,    
+            Text = records.FirstOrDefault()?.Text,
+            DateTime = records.FirstOrDefault()?.CreateDate,
+        };
+        return Ok(result);
     }
 }

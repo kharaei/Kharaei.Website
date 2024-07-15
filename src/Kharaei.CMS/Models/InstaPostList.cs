@@ -10,7 +10,7 @@ public class InstaPostList
 
 public class PostItem
 {
-    public string? Date { get; set; }        
+    public DateTime? DateTime { get; set; }        
     public string? Title { get; set; }
     public string? Image { get; set; }
     public string? URL { get; set; }
