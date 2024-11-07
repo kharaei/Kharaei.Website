@@ -1,3 +1,4 @@
+using Kharaei.CMS.Middlewares;
 using Kharaei.CMS.Models;
 using OrchardCore.Logging;
 
@@ -21,6 +22,7 @@ builder.Services.AddCors(options =>
         
 
 var app = builder.Build();
+app.UseMiddleware<RedirectMiddleware>();
 app.UseCors("MyCors");
 if (!app.Environment.IsDevelopment())
 {
