@@ -22,7 +22,7 @@ builder.Services.AddCors(options =>
         
 
 var app = builder.Build();
-app.UseMiddleware<RedirectMiddleware>();
+//app.UseMiddleware<RedirectMiddleware>();
 app.UseCors("MyCors");
 if (!app.Environment.IsDevelopment())
 {
