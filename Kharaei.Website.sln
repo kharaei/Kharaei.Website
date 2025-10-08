@@ -7,6 +7,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7E0E8ACF-201
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kharaei.CMS", "src\Kharaei.CMS\Kharaei.CMS.csproj", "{FB6BECAC-F83A-4DE0-ACD0-592F1668A99C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kharaei.Theme", "src\Kharaei.Theme\Kharaei.Theme.csproj", "{0FA71BB1-6FFE-4A0E-8D07-1A330481BDCA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,8 +22,13 @@ Global
 		{FB6BECAC-F83A-4DE0-ACD0-592F1668A99C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB6BECAC-F83A-4DE0-ACD0-592F1668A99C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB6BECAC-F83A-4DE0-ACD0-592F1668A99C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FA71BB1-6FFE-4A0E-8D07-1A330481BDCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FA71BB1-6FFE-4A0E-8D07-1A330481BDCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FA71BB1-6FFE-4A0E-8D07-1A330481BDCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FA71BB1-6FFE-4A0E-8D07-1A330481BDCA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{FB6BECAC-F83A-4DE0-ACD0-592F1668A99C} = {7E0E8ACF-2013-4B5B-A8CF-801232607C58}
+		{0FA71BB1-6FFE-4A0E-8D07-1A330481BDCA} = {7E0E8ACF-2013-4B5B-A8CF-801232607C58}
 	EndGlobalSection
 EndGlobal
